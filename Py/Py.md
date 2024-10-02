@@ -74,4 +74,36 @@ s = {10, 20, "str"}
 
 
 ###### pass by references
-- list,tuple,set, dict are pass by ref.   
+- list,tuple,set, dict are pass by ref.
+
+###### range
+r = range(5) # 0-4
+for i in r:
+  print(i) #0-4
+
+###### byte arr
+lst = [10, 20, 30]
+b=bytes(lst) # int list to bytes
+b[0] #err
+b=bytearray(lst)
+b[0]=65 #no err
+
+- byte/bytearray doesn't change the lst
+- 
+###### dictionary
+dict ={'name': 'name1', 'name': 'name2'}
+ - d.keys() list of keys
+ - d.values() # list of values
+ - d.items() # list of items
+ - for in d: # key
+ - del dict['name']
+
+###### Immutable
+- if same obj is assigned to multiple vars, vars references the same mem location.
+- a=20, b=20 if a is b => True and id(a) = id(b)
+- all primitive types and obj type're immutable
+- in java, only string is immutable
+
+
+
+

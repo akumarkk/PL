@@ -131,7 +131,12 @@ dict ={'name': 'name1', 'name': 'name2'}
 - print("name is %s, marks are %.2f"%(name, marks))
 - "name is {}, Marks are {}".format(name, marks)
 - "name is {0}, Marks are {1}".format(name, marks)
-- input => r=input("optional str: "), ret as string
+- f"enter quantity {item_qty} precision {item_qty:.2f}"
+- input => r=input("optional str: "), ret/reads a line from as string
+
+###### oops
+- static or instance methods, no property/fields in py
+
 
 
 

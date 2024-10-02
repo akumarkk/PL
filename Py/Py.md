@@ -29,6 +29,7 @@ __init__
 List
 set
 dictionary
+- "hello"*3 => repetition
 ###### string
  - multiline string '''/"""
  - index s[i:j:k] substring from i through j(not including j)
@@ -103,6 +104,36 @@ dict ={'name': 'name1', 'name': 'name2'}
 - a=20, b=20 if a is b => True and id(a) = id(b)
 - all primitive types and obj type're immutable
 - in java, only string is immutable
+
+###### Sequence types
+ - None
+ - def fun(): return None by default
+ - Escape chars :
+ - constants : final(java) PI (upper case)
+ - del : delete obj
+       a=10
+       del a
+       # dealloc's a and obj go ooscope
+
+
+###### operators
+ - arithmatic +,-, *, /, %, **(exp), //(int div quotiant/floor division)
+ - a,b=10,5
+ - +=, -=, => assigment ope
+ - <, >, <=, >=, ==, != => comparision operators
+ - logical operators => and, or, not
+ - bitwise operators => 
+
+
+###### input/output
+- join => print(10, 11, sep=",")
+- format specifiers %s, %f, %.2f
+- print("name is %s, marks are %.2f"%(name, marks))
+- "name is {}, Marks are {}".format(name, marks)
+- "name is {0}, Marks are {1}".format(name, marks)
+- input => r=input("optional str: "), ret as string
+
+
 
 
 

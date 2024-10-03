@@ -3,10 +3,12 @@ class Bmw(abc.ABC):
     def __init__(self, make):
         self.make=make
 
+    @abc.abstractmethod
     def start(self):
         # print("engine started")
         pass
 
+    @abc.abstractmethod
     def stop(self):
         # print("engine stopped")
         pass

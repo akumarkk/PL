@@ -5,6 +5,9 @@ class obj:
         self.rating = rating
     def rate(self, r):
         self.rating=r
+
+    def __del__(self):
+        print("destr")
         
 
 o1 = obj('dev', 5)

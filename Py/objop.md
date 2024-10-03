@@ -70,11 +70,25 @@ Product.major
 - var set in any methods, setter/getter not lang 
 - static/instance methods/vars
 - nested class car/engine
+
 - Abstraction
+- abstract method no implementation, share the contract for an conc. classes
+-  @abstractmethod
+        drive():
+            pass
+- abs class can have atleast one abs. method
+- use abc module(ABC, @abstractmethod)
 
 
 
 - Encapsulation
+ - bundling data and methods within the single unit
+ - protecting the properties and functionalities of an obj from another obj.
+ - name mangling: __field privarte # hdidden by interpreter, accessible by self.
+
+ - s.__Class__field name mangling
+ -   
+
 
 
 

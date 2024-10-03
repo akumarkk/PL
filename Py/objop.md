@@ -71,6 +71,30 @@ Product.major
 - static/instance methods/vars
 - nested class car/engine
 
+###### try...catch
+ - prog terminated abruptly and excep to user
+ - improper shutdown of resources
+ ```
+ try:
+    
+
+ except ZeroDivisionError:
+
+
+ else:
+
+
+ fincally:
+
+            BaseException
+            Exception
+    StandardError       Warning
+    EOFError            DeprecatedWarning
+    ZeroDivisionError   ImportWarning
+    IndentationError
+ ```
+
+
 ###### Abstraction
     - abstract method no implementation, share the contract for an conc. classes
     -  @abstractmethod

@@ -20,6 +20,8 @@
 type(var)
 None - null obj
 
+##### Keywords
+ - import keyword; keyword.kwlist
 
 #####
 magic functions
@@ -122,7 +124,8 @@ dict ={'name': 'name1', 'name': 'name2'}
  - +=, -=, => assigment ope
  - <, >, <=, >=, ==, != => comparision operators
  - logical operators => and, or, not
- - bitwise operators => 
+ - bitwise operators =>
+ - precedence & associatvity 
 
 
 ###### input/output
@@ -137,9 +140,54 @@ dict ={'name': 'name1', 'name': 'name2'}
 ###### oops
 - static or instance methods, no property/fields in py
 
+###### control state
+- conditional - if..else, if, if..elif;
 
 
+- looping - while, for
+       for var in sq: #foreach state
+       while cond_expr:
 
 
+- transfer - break, continue, pass, return
 
+
+###### assert
+ assert a>100; # err if not a > 100
+
+ eval - evaluates the given expression
+ - a=eval("{'name': 'tk'}")
+ -     return a dict
+ - 
+
+ ###### static
+  - reversed() # returns iter, ''.join(reversed())
+  - filter() # where in linq
+  - map() # select in linq
+  - reduce(lambda v:v*2, sequence) from functools import reduce
+
+
+###### command line args
+- argv[] in sys module
+- 
+
+###### functions
+- re-usable, modularity and maintenance
+- return multiple values - return tuple = v1, v2, v3
+- local/global
+       - global inside def()- globals(var_name)
+- function ptr - var = func_name
+- function in function
+- function as param to function, ret from function
+- kwargs/named params - def func(a, b) could be invoked as func(b=10, a=100)
+- default args - def func(a=10, b=10):
+-  *args(params in c#) and **kwargs - 
+       - *args - tuple/positional params; def func(a, *args/(b,c,...)): func(a, b, c,...)
+       - **kwargs - def func(a, *args, **kwargs) as dict
+              func(a, 10, 20, 30, name='stud', age=10)
+              args avar *args = (10, 20, 0) kwargs = {'name': 'stud', 'age': 10}
+
+
+###### generics
+- functions  params generic by default
 

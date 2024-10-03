@@ -42,6 +42,10 @@ class Product:
         print(self.name, self.ratings)
         <!-- return self.name -->
 
+    # destr
+    def __del__(self):
+        #db cleanup
+
 class Car:
     def __init__(self, model):
         self.model = model
@@ -79,5 +83,10 @@ Product.major
 
 
 - Inheritence
+
+###### garbage collection
+- runs in bg, dealloc's obj which aren't referenced anymore.
+- import gc; gcisenabled(), gc.enable(), gc.disable()
+
 
 

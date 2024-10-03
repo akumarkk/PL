@@ -34,7 +34,20 @@
  ```
  - used instead of range like iter for customizing
 
- ###### decorators
+ ###### modules
+  - group of func, variables and classes
+  - module name = py name
+ - dir() - all mem of module/imported module
+ - help(math) - doc of module
+ - random module => from random import *; random(), randint(1, 50), uniform(1, 50)
+ - rangerange(1, 12, 2)
+ - choice(list) # choice random selection
+ - 
+###### list comprehensions
+- one list from another list
+- list = [expression for item in iterable if condition]
+- z = [a[i] * b[i] for i in range(len(a))]
+- 
 
 
 

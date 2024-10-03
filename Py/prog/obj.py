@@ -1,3 +1,5 @@
+import gc
+
 class obj:
     major = 'CSE'
     def __init__(self, name, rating):
@@ -10,7 +12,15 @@ class obj:
         print("destr")
         
 
+print(gc.isenabled())
 o1 = obj('dev', 5)
 o1.rate(5)
 print(o1.rating)
 print(obj.major)
+o1 = None
+
+o1 = obj('dev', 5)
+o1.rate(5)
+print(o1.rating)
+
+

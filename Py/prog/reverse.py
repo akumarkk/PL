@@ -11,5 +11,15 @@ def reverse(s1):
         ret += " " + ''.join(lst)
     return ret
 
+def revword(s1):
+    ret = ""
+    for w in s1.split():
+        ret += " " + ''.join (reversed(w))
+    return ret
+
+
+
 print(reverse("hello welcome")) 
+
+print(revword("hello welcome"))
 

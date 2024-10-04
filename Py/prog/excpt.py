@@ -11,8 +11,8 @@ def limitexcepvalidate():
 
 try:
     limitexcepvalidate()
-except OverTheLimitException:
-    print("over the limit except")
+except OverTheLimitException as obj:
+    print("over the limit except {}".format(obj))
 
 a, b = [int(v) for v in input().split()]
 try:

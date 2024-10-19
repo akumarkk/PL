@@ -12,4 +12,3 @@ QA Automation
     cypress
 
 PL for interact with web(html/css)
-

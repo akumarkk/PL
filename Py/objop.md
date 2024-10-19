@@ -84,7 +84,7 @@ Product.major
  else:
 
 
- fincally:
+ finally:
 
             BaseException
             Exception
@@ -93,6 +93,7 @@ Product.major
     ZeroDivisionError   ImportWarning
     IndentationError
  ```
+ traceback — Print or retrieve a stack traceback
 
 
 ###### Abstraction

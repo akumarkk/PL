@@ -1,3 +1,11 @@
+###### OOPS
+JavaScript, despite being an object-oriented language, supports functional programming principles/procedural programming.
+
+Casing:
+- camelCase
+- PascalCase
+- snake_case
+
 ###### cross-platform desktop apps Apps
 
 https://www.electronjs.org/

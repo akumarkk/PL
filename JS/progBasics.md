@@ -26,7 +26,9 @@
 
  Inherited Properties
     hasOwnProperty //To check if a property is an object’s own property
+    
  Property Attributes
+
     - value: The property’s value.
     - writable: When true, the property’s value can be changed
     - enumerable: When true, the property can be iterated over by “for-in” enumeration. Otherwise, the property is said to be non-enumerable.
@@ -43,6 +45,7 @@
 
     user.noSuchProperty === undefined
     "key" in object
+ 
  
  Object create
 
@@ -80,8 +83,8 @@
             }
 
             v = new Vehicle('BMW', 'BMW', 'Bmw')
-
     ```
+
 
 ###### reducers
 
@@ -112,3 +115,57 @@ object is enumerable
     defineProperty(obj, property, {enumerable: false}) // not enumerable
 
 ###### Finite state machine
+
+initial state
+terminal state
+
+each state consists of set of valid states, in which transitions are possible.
+
+```
+const 
+
+const states = {
+  idle: {
+    on: {
+      CLICK: 'loading'
+    }
+  },
+  loading: {
+    on: {
+      SUCCESS: 'success',
+      ERROR: 'error'
+    }
+  },
+    : {
+    on: {
+      RESET: 'idle'
+    }
+  },
+  error: {
+    on: {
+      RETRY: 'loading',
+      RESET: 'idle'
+    }
+  }
+};
+
+
+// Initial state
+let currentState = 'idle';
+
+// Function to transition between states
+function transition(action) {
+  const nextState = states[currentState]?.on[action];
+  if (nextState) {
+    currentState = nextState;
+    console.log('Transitioned to state:', currentState);
+  } else {
+    console.log('Invalid action for current state');
+  }
+}
+
+// Example transitions
+transition('CLICK'); // Transition to loading state
+transition('SUCCESS'); // Transition to success state
+transition('RESET'); 
+```

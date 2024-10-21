@@ -295,3 +295,21 @@ Object Inspection
 
   - Object.prototype.hasOwnProperty(prop): Determines whether an object has a specified own property.
   - Object.prototype.toString(): Returns a string representing the object's type.
+
+  ##### Closures, Partial applications, Currying
+
+  - closures - function that returns another function as ret value, which have access to enclosing scope
+
+  Partial application - returned function that has access to enclosing scope and partial vars applied
+
+  - Currying - process of breaking a function with multiple args into smaller functions of single arg
+  ```
+  function bake(cakeType) {
+    return function(cakeFlavor) {
+      return function(incing) {
+        return `make a cake with {cakeType} {cakeFlavor} with {incing} incing`
+      }
+    }
+  }
+
+  ```

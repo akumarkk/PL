@@ -268,3 +268,30 @@ throw Error("error")
     ENUM2: "Value2"
   })
 ```
+
+
+##### Object methods
+
+Object Creation and Manipulation
+
+  - Object.create(proto, properties): Creates a new object with the specified prototype and properties.
+  - Object.assign(target, ...sources): Copies the enumerable own properties from one or more source objects to a target object.
+  - Object.keys(obj): Returns an array of an object's own enumerable property names.
+  - Object.values(obj): Returns an array of an object's own enumerable property values.
+  - Object.entries(obj): Returns an array of an object's own enumerable property key-value pairs.
+  - Object.defineProperty(obj, prop, descriptor): Defines a new property or modifies an existing property on an object.
+  - Object.defineProperties(obj, descriptors): Defines multiple new properties or modifies existing properties on an object.
+  - Object.seal(obj): Prevents new properties from being added to an object and makes existing properties non-configurable.
+  - Object.freeze(obj): Prevents new properties from being added to an object, prevents existing properties from being removed or modified, and makes existing properties non-configurable, prevents existing properties from being deleted .
+
+Object Inspection
+
+  - Object.is(value1, value2): Determines whether two values are the same.
+  - Object.getPrototypeOf(obj): Returns the object's prototype. 
+  - Object.setPrototypeOf(obj, proto): Sets the object's prototype.
+  - Object.isExtensible(obj): Determines whether an object is extensible (can have new properties added).
+  - Object.preventExtensions(obj): Prevents new properties from being added to an object.
+
+
+  - Object.prototype.hasOwnProperty(prop): Determines whether an object has a specified own property.
+  - Object.prototype.toString(): Returns a string representing the object's type.

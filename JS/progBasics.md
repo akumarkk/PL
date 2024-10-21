@@ -51,7 +51,7 @@
 
     - {}
 
-    - constructor
+    - constructor/Factory functions
     
     ```
         function Stud(name, age, marks) {
@@ -167,5 +167,32 @@ function transition(action) {
 // Example transitions
 transition('CLICK'); // Transition to loading state
 transition('SUCCESS'); // Transition to success state
-transition('RESET'); 
+transition('RESET');
 ```
+- dispatch basically executes the action
+ - transition - transition to the given state
+ https://gist.github.com/prof3ssorSt3v3/9eb833677b8aa05282d72f0b3c120f03
+
+
+
+
+###### Factory functions and prototype
+
+- prototype objects are used when we've common functions/properties across the instances of the obj.
+```
+const Person = function(nm) {
+    this.name = nm;
+    this.speak = function(words) {
+        console.log(words)
+    }
+}
+
+
+instead use prototype for speak()
+Person.prototype.speak = function(words) {
+        console.log(words)
+}
+
+```
+
+- variables without this operator becomes function scoped and not available on instance.

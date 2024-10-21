@@ -182,7 +182,7 @@ transition('RESET');
 ```
 const Person = function(nm) {
     this.name = nm;
-    this.speak = function(words) {
+    this.speak1 = function(words) {
         console.log(words)
     }
 }
@@ -196,3 +196,9 @@ Person.prototype.speak = function(words) {
 ```
 
 - variables without this operator becomes function scoped and not available on instance.
+- each instance gets it's copy of the function
+  ```
+  console.log(pu.speak1 == su.speak1, pu.speak=== su.speak)
+  false true
+  ```
+- use prototype/static functions where the fn is shared across the instances.

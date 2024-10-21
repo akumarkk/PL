@@ -13,7 +13,37 @@
 - generally refers to 
     - assignment to var
     - assignment from fun  params
-    
+
+###### Object
+ - properties
+ - methods
+ 
+ Computed properties
+    let bag = { [fruit]: 5}
+        // property name - fruit
+ Property value shorthand
+    let o {name, age, marks}
+
+ Inherited Properties
+    hasOwnProperty //To check if a property is an object’s own property
+ Property Attributes
+    value: The property’s value.
+    writable: When true, the property’s value can be changed
+    enumerable: When true, the property can be iterated over by “for-in” enumeration. Otherwise, the property is said to be non-enumerable.
+    configurable: If false, attempts to delete the property, change the property to be an access-or property, or change its attributes (other than [[Value]], or changing [[Writable]] to false) will fail.
+
+    - non-strict mode no error on writing to non-writable property
+    - Making a property non-configurable is a one-way road. We cannot change it back with defineProperty.
+    - Object.getOwnPropertyDescriptors - obj get's own property descriptor
+    - there are no limitations on property names
+    -  integer properties are sorted, non-integer properties appear in create order
+ Property existence test, “in” operator
+    user.noSuchProperty === undefined
+    "key" in object
+
+
+
+
 
 ###### reducers
 
@@ -40,5 +70,7 @@ object is enumerable
     for key in obj:
         log(key)
     ``` 
+
+    defineProperty(obj, property, {enumerable: false}) // not enumerable
 
 ###### Finite state machine

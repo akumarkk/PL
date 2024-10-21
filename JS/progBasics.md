@@ -27,10 +27,10 @@
  Inherited Properties
     hasOwnProperty //To check if a property is an object’s own property
  Property Attributes
-    value: The property’s value.
-    writable: When true, the property’s value can be changed
-    enumerable: When true, the property can be iterated over by “for-in” enumeration. Otherwise, the property is said to be non-enumerable.
-    configurable: If false, attempts to delete the property, change the property to be an access-or property, or change its attributes (other than [[Value]], or changing [[Writable]] to false) will fail.
+    - value: The property’s value.
+    - writable: When true, the property’s value can be changed
+    - enumerable: When true, the property can be iterated over by “for-in” enumeration. Otherwise, the property is said to be non-enumerable.
+    - configurable: If false, attempts to delete the property, change the property to be an access-or property, or change its attributes (other than [[Value]], or changing [[Writable]] to false) will fail.
 
     - non-strict mode no error on writing to non-writable property
     - Making a property non-configurable is a one-way road. We cannot change it back with defineProperty.
@@ -40,29 +40,36 @@
     - property keys must be string/symbols
 
  Property existence test, “in” operator
+
     user.noSuchProperty === undefined
     "key" in object
+ 
  Object create
-    {}
-    constructor
-        ```
-            function Stud(name, age, marks) {
+
+    - {}
+
+    - constructor
+    
+    ```
+        function Stud(name, age, marks) {
                 this.name = name,
                 this.age = age,
                 this.marks = marks
-            }
+        }
 
-            s = new Stud('arush', 10, 100)
-        ```
+        s = new Stud('arush', 10, 100)
+    ```
 
-    Object.create()
+    - Object.create()
+
     ```
         stud = {name: 'arush', age: 10, marks: 100}
         Object.create(stud)
 
     ```
 
-    es6 classes
+    - es6 classes
+    
     ```
             class Vehicle {
                 constructor(name, maker, engine) {
@@ -75,10 +82,6 @@
             v = new Vehicle('BMW', 'BMW', 'Bmw')
 
     ```
- 
-
-
-
 
 ###### reducers
 

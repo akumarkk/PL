@@ -11,6 +11,8 @@ a1: 11
 obj = {o, o1
 }
 console.log(obj)
+console.log(o1.a1)
+
 
 
 reducer = (state, action) => {

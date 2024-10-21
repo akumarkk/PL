@@ -33,3 +33,12 @@ reducer = (state, action) => {
 ```
 
 - function that take's state, action/condition; based on condition, returns new stateof the obj
+
+###### Enumerable
+object is enumerable
+    ```
+    for key in obj:
+        log(key)
+    ``` 
+
+###### Finite state machine

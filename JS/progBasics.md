@@ -37,10 +37,45 @@
     - Object.getOwnPropertyDescriptors - obj get's own property descriptor
     - there are no limitations on property names
     -  integer properties are sorted, non-integer properties appear in create order
+    - property keys must be string/symbols
+
  Property existence test, “in” operator
     user.noSuchProperty === undefined
     "key" in object
+ Object create
+    {}
+    constructor
+        ```
+            function Stud(name, age, marks) {
+                this.name = name,
+                this.age = age,
+                this.marks = marks
+            }
 
+            s = new Stud('arush', 10, 100)
+        ```
+
+    Object.create()
+    ```
+        stud = {name: 'arush', age: 10, marks: 100}
+        Object.create(stud)
+
+    ```
+
+    es6 classes
+    ```
+            class Vehicle {
+                constructor(name, maker, engine) {
+                this.name = name;
+                this.maker =  maker;
+                this.engine = engine;
+                }
+            }
+
+            v = new Vehicle('BMW', 'BMW', 'Bmw')
+
+    ```
+ 
 
 
 

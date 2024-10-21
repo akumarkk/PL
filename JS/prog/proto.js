@@ -21,5 +21,6 @@ su = new Person("suvith")
 su.speak("'hello, i'm suvith")
 su.speak1("'hello, i'm suvith")
 
-console.log(pu.speak1 == su.speak1, pu.speak1=== su.speak1)
+console.log(pu.speak1 == su.speak1, pu.speak=== su.speak)
+// console.log(pu.speak1 == su.speak1, pu.speak1=== su.speak)
 

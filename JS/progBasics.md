@@ -202,3 +202,69 @@ Person.prototype.speak = function(words) {
   false true
   ```
 - use prototype/static functions where the fn is shared across the instances.
+
+
+###### iterable vs enumerable
+
+- arrays, string - iterables
+- object - enumerables
+
+```
+function isIterable(obj) {
+
+  return obj[Symbol.iterable] && typeof obj[Symbol.iterable] === 'function';
+}
+
+```
+
+
+###### try...catch
+```
+try {
+}
+catch (Exception){
+}finally {
+   ... execute always ...
+}
+
+Exception {
+  name
+  message
+  stack
+}
+
+throw Error("error")
+
+```
+
+- finally get executed irrespective of return from catch and try
+
+###### Errors
+```
+ SteveError = function (msg) {
+ 
+  Object.create(Error.prototype, {
+    name: {value: "SteveError", enumerable:true},
+    message: {value: msg, enumerable:true}
+  })
+ }
+
+ export {SteveError};
+
+ try {
+  throw new SteveError("Error message - steve")
+ } catch (SteveError e) {
+ }
+
+```
+
+###### Enums
+
+- use Object.freeze() - freezes the property descriptor from configured
+- read-only, non-editable
+```
+  Object.freeze({
+    ENUM1: "value1",
+    ENUM2: "Value2"
+  })
+```

@@ -191,3 +191,7 @@ dict ={'name': 'name1', 'name': 'name2'}
 ###### generics
 - functions  params generic by default
 
+###### asyncio
+- used for concurrency.
+- asyncio(main())
+

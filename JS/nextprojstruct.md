@@ -118,6 +118,13 @@ pages
                 useBankingHistory.ts
         banking
             index.tsx
+    api
+        axios
+            bankingInstance.ts // axios.create({baseUrl, headers})
+        base
+            bankingBase.ts // base url
+        endPoints
+            bankingEndpoints.ts
 
 public
     assets

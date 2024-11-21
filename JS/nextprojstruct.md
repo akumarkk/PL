@@ -66,6 +66,101 @@ context
     interfaces
     value
 
-Coverage
+coverage
+lib
+    config
+    plugin
+
+libs
+    banking
+        hooks
+            useBanking.ts
+            useBankingContainer.ts
+        interfaces
+            ibanking.ts
+        mocks
+
+        services
+
+        models
+
+        history
+        utils
+        values
+            DEFAULT_BANK_VALUES
+
+    settlements
+libs
+    banking
+        hooks
+            useBanking.ts
+            useBankingContainer.ts
+        interfaces
+            ibanking.ts
+        mocks
+
+        services
+            bankingSvc.ts
+        models
+        history
+        utils
+        values
+            DEFAULT_BANK_VALUES
+    settlements
+
+pages
+    banking
+        components
+            common
+            banking
+                useBanking.ts
+                useBankingCOntainer.ts
+                useBankingHistory.ts
+        banking
+            index.tsx
+
+public
+    assets
+    images
+    error.html
+    favicon.ico
+    logoutPage.html
+
+server
+    config
+    plugins
+    index.ts
+
+tsconfig.server.json
+
+package.json
+    ts-node --project tsconfig.server.json server
 
 
+.eslintrc.json
+.npmrc
+jest.config.ts
+jest.setup.ts
+root-ca.cert
+
+
+
+libs
+    banking
+        hooks
+            useBanking.ts
+            useBankingContainer.ts
+        interfaces
+            ibanking.ts
+        mocks
+
+        services
+
+        models
+
+        history
+        utils
+        values
+            DEFAULT_BANK_VALUES
+
+    settlements

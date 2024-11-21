@@ -24,4 +24,48 @@ components
     duration
     ellipsis
     error
-    
+    fishbone
+    forms
+    fullscreen
+    header
+    horizontalBarChart
+    iconButton
+    layout
+    lineChart
+    loader
+    loadingDots
+    logout
+    menu
+    modal
+    pagination
+    priorityText
+    progressTag
+    radio
+    searchField
+    select
+    sideMenu
+    spinner
+    statusTag
+    subheader
+    summaryCards
+    switch
+    table
+    tableFilters
+    tags
+    text
+    textArea
+    textField
+    title
+    titleTabs
+    toggle
+    verticalBarChart
+
+config
+context
+    hooks
+    interfaces
+    value
+
+Coverage
+
+

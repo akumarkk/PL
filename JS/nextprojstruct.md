@@ -148,6 +148,8 @@ package.json
 .npmrc
 jest.config.ts
 jest.setup.ts
+__mocks__
+__tests__
 root-ca.cert
 
 
@@ -162,6 +164,7 @@ libs
         mocks
 
         services
+            bankingSvc.ts
 
         models
 

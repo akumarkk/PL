@@ -15,3 +15,15 @@ Mutator and collector thread
 
 Mutator - creating, reading and writing objects.
 collector - garbage collecting thread
+
+Explicit GC
+- triggered by new()
+obj  = alloc()
+if obj ==  null:
+    collector()
+    obj = alloc()
+    if obj == null:
+        raise "OOM"
+    return obj
+
+Explicit 

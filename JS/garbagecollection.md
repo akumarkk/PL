@@ -5,6 +5,7 @@ Mark and sweep
 
 2. Sweep -
     collector traverses all the objects in the heap and deletes that are unmarked and unreachable from root/globals
+    - also unmarks objects for subsequent reference
 
 - identifies what's live and everything else become's garbage.
 
@@ -25,5 +26,8 @@ if obj ==  null:
     if obj == null:
         raise "OOM"
     return obj
+
+Root node
+    thread stack, globals
 
 Explicit 

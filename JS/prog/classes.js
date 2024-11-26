@@ -22,8 +22,17 @@ class User {
 
 }
 
+class Employee extends User {
+    constructor(name, age, email, dep) {
+        super(name, age, email);
+        this.dep = dep;
+    }
+
+}
+
 try {
-    u = new User("tk", 10, "test@gmail.com")
+    u = new Employee("tarak", 10, "test@gmail.com", "commerce")
+    console.log(u)
 
 } catch(e) {
     console.error("err: ")

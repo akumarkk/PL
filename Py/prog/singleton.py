@@ -5,10 +5,11 @@ class EleSingleton:
 
     def __init__(self, val):
         print(f"v {EleSingleton.count} {val} ")
-        EleSingleton.count = 1 + EleSingleton.count
-        if EleSingleton.count == 1:
+        
+        if EleSingleton.count == 0:
             print("init")
             self.val = val
+        EleSingleton.count = 1 + EleSingleton.count
 
     def __new__(cls, *args, **kwargs):
         print(args, kwargs)

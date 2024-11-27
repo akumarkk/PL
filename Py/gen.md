@@ -31,3 +31,7 @@ dt.datetime.now()/utcnow()
 ###### perf_counter
     start = time.perf_counter() #time in seconds
     end = time.perf_counter()
+
+##### Top-Level Components in Python: A Comprehensive Guide
+
+In Python, top-level components refer to code that is executed directly when a script is run, outside of any functions, classes, or other indented blocks. These components define the main logic and behavior of the program.

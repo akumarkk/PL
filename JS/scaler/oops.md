@@ -5,14 +5,22 @@
 3. Block scope
     let, const
 
+    let, const - have block, function and global scope!(after ES6)
+        no hoisting // ReferenceError: Cannot access 'e' before initialization
+        no redeclaration within the same scope!
+        recommended over var
+        caniuse.com
+
+
 
 ###### Hoisting
-var-declared variables are hoisted to the top of their containing scope.
+var-declared variables and functions are hoisted to the top of their containing scope.
 JavaScript had only two types of scopes: global and function. Variables declared with the var keyword are hoisted to the top of their function scope.
 
 var does not have block-level scope. It is function-scoped, meaning it's accessible within the entire function, regardless of block boundaries like if statements, for loops, or while loops.
+var redeclaration is possible
 ```
-funciton t1()
+function t1()
 {
     console.log(h) // undefined
     var h = "hello from agent";

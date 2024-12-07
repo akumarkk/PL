@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dom</title>
+    <!-- <script src="./script.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                let ele = document.getElementById('app');
+                ele.innerText = "Hello from app!"
+                ele.innerHTML = "Hello from app!"
+
+        });
+        window.addEventListener('load', ()=> {
+
+            console.log('resources fully loaded.');
+        });
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+    
+</body>
+</html>

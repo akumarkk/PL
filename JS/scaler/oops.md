@@ -32,6 +32,53 @@ function t1()
     }
     console.log(d);
 }
-
+```
 t1();
 console.log(h) // Reference error as hoisted within the function scope 
+
+###### Shadowing
+ - delcaring the same variable in diff/same scopes
+ - legal shadowing - redeclaring in the same scope
+ - illegal shadowing  - redeclaring in the diff scope
+
+###### this
+this - points to the enclosing scope!
+```
+let cap = {
+    firName: "Tarak",
+    sayHi: () => { consoloe.log(`hi from ${this.firName}`);}
+};
+cap.sayHi(); // 'Tarak'
+var firName = "Tarak Devara";
+let sayHi = cap.sayHi;
+sayHi(); // 'Tarak Devara'
+
+
+```
+
+
+```
+// file1.js
+var myVariable = "hello";
+console.log(myVariable); // Output: hello
+
+// file2.js
+console.log(global.myVariable); // Output: undefined (if not defined globally)
+```
+NodeJs: if declared outside of a function, it becomes a global variable accessible within that module. However, it's not directly attached to the global object.
+
+
+
+###### Object
+- collection of peroperties, methods and represented by k-v pair.
+object vs json
+    - obj key - can be non-quoted string 
+    - JSON.parse("{\"a\": 10}") // {a: 10}
+
+###### native vs host objects
+Native - objects provided by js PL
+Host object - objects provided by the env.
+    Node - globals, process
+    borwser - window, document, localStorage, sessionStorage
+    
+###### 

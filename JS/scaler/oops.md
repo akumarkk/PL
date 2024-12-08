@@ -36,13 +36,53 @@ function t1()
 t1();
 console.log(h) // Reference error as hoisted within the function scope 
 
+###### ctor function return value
+Understanding the Implicit Return
+
+When you use the new keyword to call a constructor function, a new object is implicitly created and assigned to the this keyword within the function. This object is then returned by default, even if there's no explicit return statement.
+\Explicit Return Values
+
+- Returning an Object:
+```
+function Person(name, age) {
+    return {
+        name: name,
+        age: age
+    };
+}
+
+const person1 = new Person('Alice', 30);
+console.log(person1); // Output: { name: 'Alice', age: 30 }
+```
+
+- Returning a Primitive Value:
+```
+function Person(name, age) {
+    return 42; // Ignored
+}
+
+const person2 = new Person('Bob', 25);
+console.log(person2); // Output: {} (empty object)
+```
+
 ###### Shadowing
  - delcaring the same variable in diff/same scopes
  - legal shadowing - redeclaring in the same scope
  - illegal shadowing  - redeclaring in the diff scope
 
 ###### this
-this - points to the enclosing scope!
+this - points to the enclosing scope! (class/global/window in case of browser)
+1. Global context : this === window
+2. Function context: global/window
+    ```
+    function show(){
+        console.log(this) // window/global
+    }
+    ```
+    in strict mode, this is undefined.
+3. Object context/method context: object called with object or calling context
+
+
 ```
 let cap = {
     firName: "Tarak",

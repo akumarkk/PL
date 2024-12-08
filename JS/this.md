@@ -4,6 +4,6 @@
 | function  | global/window  |global        |               |
 | ctor method | ctor function/object | ctor function/object| ctor function/object |
 | object method   | object         | object       | object        |
-| arrow function  | {}  |{}        |    undefined           |
+| arrow function  | window |{}        |    undefined           |
 | arrow ctor method | ctor function/object | ctor function/object| ctor function/object |
-| arrow object method   | {}         | {}       | undefined        |
+| arrow object method   | window       | {}       | undefined        |

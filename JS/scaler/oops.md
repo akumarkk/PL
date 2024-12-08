@@ -81,7 +81,8 @@ this - points to the enclosing scope! (class/global/window in case of browser)
     ```
     in strict mode, this is undefined.
 3. Object context/method context: object called with object or calling context
-
+4. Arrow  Function context:
+Global Scope Issue: In the global scope of both Node.js and browsers, this typically refers to the global object (e.g., window in browsers, the module object in Node.js)
 
 ```
 let cap = {

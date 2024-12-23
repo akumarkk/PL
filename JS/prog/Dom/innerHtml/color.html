@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Balls</title>
+
+    <style>
+        .ball {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></dev>
+
+    <script>
+        let ball = document.querySelectorAll('.ball');
+        let count = 0;
+        ball.forEach((element) => {
+            count++;
+            let cnt = count;
+
+            setTimeout(() => {
+                // let cnt = count;
+                if(cnt % 2 == 0) {
+                    element.style.backgroundColor = 'green';
+                    return;
+                }
+                element.style.backgroundColor = 'blue';
+            }, 1000);
+            // element.addEventListener('click', setTimeout(() => {
+            //     element.style.backgroundColor = 'blue';
+            // }, 1000))
+        })
+    </script>
+
+</body>
+</html>

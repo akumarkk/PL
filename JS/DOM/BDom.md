@@ -140,3 +140,25 @@ let container = document.querySelector('.container');
 
         }, 2000);
 ```
+
+
+###### Object Browser
+Node properties
+- nodeType
+- nodeName
+- nodeValue
+
+Node Methods
+- cloneNode(deep)
+- removeChild(child)
+- replaceChild(newChild, oldChild)
+- insertBefore(newChild, refChild)
+
+Node Lists
+- forEach(callback)
+- item(index)
+- length
+
+HTML Collection
+- item(index)
+- length

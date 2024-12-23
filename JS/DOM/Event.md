@@ -30,3 +30,20 @@ Key Points:
 - Event capturing is less commonly used than event bubbling.
 - Event capturing can improve performance in some cases by preventing unnecessary event handling at the target level.
 - It's important to understand how event capturing works to avoid unexpected behavior in your web applications.
+
+###### Event Delegation 
+
+
+Event Delagation : how to attach a single event handler to a parent element to manage events on multiple child elements!
+Example : dynamic menu - one listener on parent container! 
+
+*works on event bubbling, if event bubbling is enabled*
+*cathes all the events/ripples higher up*
+
+Example : https://plnkr.co/edit/nnoHlUwEE1TJVeWh?p=preview&preview
+
+Event.target - points to the exact element that triggered the event.
+Event.currentTarget - points to the element that is currently handling the event.
+Event.stopPropagation() - stops the event from propagating to parent elements.
+Event.preventDefault() - prevents the default behavior of the event.
+

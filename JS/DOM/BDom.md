@@ -61,6 +61,24 @@ getElement*() - returns the first element(Element type) that matches the selecto
 - Node Object : Base Class: The Node object is the base class for all objects in the DOM tree.
 - Event Object: Event Handling: The Event object provides information about an event that has occurred (e.g., a click, mouseover, keypress).
 - HTML Collection - an ordered collection of HTML elements.
+*HTMLCollection itself doesn't directly have a forEach method.*
+
+```
+const elements = document.getElementsByTagName('p'); 
+const elementsArray = Array.from(elements); 
+
+elementsArray.forEach(element => {
+    console.log(element.textContent); 
+});
+
+// or
+const elements = document.getElementsByTagName('p'); 
+
+for (let i = 0; i < elements.length; i++) {
+    console.log(elements[i].textContent); 
+}
+```
+
 ```
     document.getElementsByClassName('w3-example') - returns as HTML collection;
     // HTMLCollection is a collection of these element nodes.

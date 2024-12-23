@@ -52,9 +52,37 @@ document - enables the interaction/programming with the webpage in response to t
 - outerText
 
 ###### Dom Objects
+Node -> Element
 - Element - Element Object; Represents HTML Elements: Each HTML element (e.g., <p>, <div>, <img>) is represented by an Element object in the DOM. 
     - Specific Type of Node: An element node specifically represents an HTML or XML element (e.g., <div>, <span>, <button>).
+```
+getElement*() - returns the first element(Element type) that matches the selector
+```
 - Node Object : Base Class: The Node object is the base class for all objects in the DOM tree.
 - Event Object: Event Handling: The Event object provides information about an event that has occurred (e.g., a click, mouseover, keypress).
 - HTML Collection - an ordered collection of HTML elements.
+```
+    document.getElementsByClassName('w3-example') - returns as HTML collection;
+    // HTMLCollection is a collection of these element nodes.
+```
 - NodeList Object: An ordered collection of nodes.
+```
+    document.querySelectorAll('.w3-example') - returns as node list
+```
+    
+
+###### Dom Node Properties
+textContent vs innerHTML
+```
+<div id="myDiv">
+  <h1>Hello, World!</h1>
+  <p>This is a paragraph.</p>
+</div>
+
+<script>
+  const myDiv = document.getElementById('myDiv');
+
+  console.log(myDiv.textContent); // Output: "Hello, World!\nThis is a paragraph." 
+  console.log(myDiv.innerHTML);   // Output: "<h1>Hello, World!</h1><p>This is a paragraph.</p>" 
+</script>
+```

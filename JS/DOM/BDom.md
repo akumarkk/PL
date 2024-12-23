@@ -1,4 +1,7 @@
 ###### Dom
+
+*Dom Crud operations are expensive; instead of delete/remove, we hide the elements with display:none*
+
 - Node List vs HTML Collection
 - document.getElementById()
 - document.getElementsByClassName()
@@ -120,4 +123,20 @@ Retrieves: Only the visible text content of an element.
     const div = document.getElementById('myDiv');
     console.log(div.innerText); // Output: "This is some text. " 
 </script>
+```
+
+##### Append vs Prepend
+Move, Not Duplicate: When you use appendChild() with the same element, it doesn't create a duplicate. Instead, it moves the existing element to the new parent.
+
+```
+let container = document.querySelector('.container');
+        setTimeout(() => {
+            let rect = document.createElement('div');
+            rect.classList.add('rect');
+            container.appendChild(rect);
+            container.appendChild(rect);
+            container.appendChild(rect);
+            container.appendChild(rect);
+
+        }, 2000);
 ```

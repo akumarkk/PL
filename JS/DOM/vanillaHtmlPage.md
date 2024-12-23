@@ -16,3 +16,12 @@ Definition: The process of redrawing the affected parts of the page to reflect c
 
 Impact:
 Less expensive than reflow: Repaints generally have a lower performance impact than reflows.
+
+###### Virtual DOM for the rescue
+Essentially, the virtual DOM provides a mechanism that allows the actual DOM to compute minimal DOM operations when re-rendering the UI.
+
+It allows you to update a view whenever state changes by creating a full representation of the view and then patching the DOM efficiently to look exactly as you described it.
+
+After React creates the new virtual DOM tree, it compares it to the previous snapshot using a diffing algorithm called reconciliation to figure out what changes are necessary.
+
+After the reconciliation process, React uses a renderer library like ReactDOM, which takes the differ information to update the rendered app. This library ensures that the actual DOM only receives and repaints the updated node or nodes.

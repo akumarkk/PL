@@ -73,6 +73,8 @@ getElement*() - returns the first element(Element type) that matches the selecto
 
 ###### Dom Node Properties
 textContent vs innerHTML
+textContent : All text content within an element, including that of hidden elements.
+innerHTML : All HTML content within an element, including that of hidden elements.
 ```
 <div id="myDiv">
   <h1>Hello, World!</h1>
@@ -84,5 +86,20 @@ textContent vs innerHTML
 
   console.log(myDiv.textContent); // Output: "Hello, World!\nThis is a paragraph." 
   console.log(myDiv.innerHTML);   // Output: "<h1>Hello, World!</h1><p>This is a paragraph.</p>" 
+</script>
+```
+
+innerText
+
+Retrieves: Only the visible text content of an element.
+```
+<div id="myDiv">
+    This is some text. 
+    <span style="display: none;">Hidden text</span>
+</div>
+
+<script>
+    const div = document.getElementById('myDiv');
+    console.log(div.innerText); // Output: "This is some text. " 
 </script>
 ```

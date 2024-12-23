@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHtml</title>
+</head>
+<body>
+    <p>2+2 = 66</p>
+    
+    <script>
+        let p = document.querySelector('p');
+        p.innerHTML = "<b>2+2 = 4</b>"; // 2+2 = 4
+        p.innerText = "<i>2+2 = 4</i>"; // <b>2+2 = 4</b
+        p.textContent = "2+2 = 4"; //<b>2+2 = 4</b
+        p.textContent = "<b>2+2 = 4</b>"; //<b>2+2 = 4</b
+    </script>
+</body>
+</html>

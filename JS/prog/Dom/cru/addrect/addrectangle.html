@@ -37,11 +37,20 @@
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let container = document.querySelector('.container');
+            let p = document.createElement('p');
+            p.innerText = `DOMContentLoaded ${Date.now().toLocaleString()}`;
+            container.appendChild(p);
+
+            
+        });
         // Move, Not Duplicate: When you use appendChild() with the same element, it doesn't create a duplicate. Instead, it
 
         let container = document.querySelector('.container');
+        let rect;
         setTimeout(() => {
-            let rect = document.createElement('div');
+             rect = document.createElement('div');
             rect.classList.add('rect');
             container.appendChild(rect);
             container.appendChild(rect.cloneNode());
@@ -49,6 +58,24 @@
             container.appendChild(rect.cloneNode());
 
         }, 2000);
+
+        setTimeout(() => {
+            let r = document.querySelectorAll('.rect');
+            r.forEach((element) => {
+                element.style.backgroundColor = 'blue';
+                element.remove();
+            });
+
+            let p = document.createElement('p');
+            p.innerText = 'rectangles removed';
+            container.appendChild(p);
+
+            // container.appendChild("<p>rectangles removed</p>");
+            
+
+        }, 5000);
+
+
     </script>
     
 </body>

@@ -22,7 +22,7 @@
     - Navigation: Handling navigation events.
 
 - JS Engine
-- Rendering Engine: The rendering engine is a crucial component within the broader browser engine.
+- Rendering Engine: The rendering engine is a ##crucial component within the broader browser engine.
 - Data storage
 - Networking
 - Security(Cors, CSP)
@@ -50,3 +50,11 @@ document - enables the interaction/programming with the webpage in response to t
 - innerText : returns the inner text of the element
 - textContent : returns the text content of the element
 - outerText
+
+###### Dom Objects
+- Element - Element Object; Represents HTML Elements: Each HTML element (e.g., <p>, <div>, <img>) is represented by an Element object in the DOM. 
+    - Specific Type of Node: An element node specifically represents an HTML or XML element (e.g., <div>, <span>, <button>).
+- Node Object : Base Class: The Node object is the base class for all objects in the DOM tree.
+- Event Object: Event Handling: The Event object provides information about an event that has occurred (e.g., a click, mouseover, keypress).
+- HTML Collection - an ordered collection of HTML elements.
+- NodeList Object: An ordered collection of nodes.

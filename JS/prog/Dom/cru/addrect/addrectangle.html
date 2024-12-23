@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add rect</title>
+    <style>
+        .ball {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+            background-color: red;
+        }
+
+        .rect {
+            /* position: absolute; */
+            width: 30px;
+            height: 30px;
+            background-color: green;
+            display: inline-block;
+            vertical-align: top; 
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+
+    <script>
+        // Move, Not Duplicate: When you use appendChild() with the same element, it doesn't create a duplicate. Instead, it
+
+        let container = document.querySelector('.container');
+        setTimeout(() => {
+            let rect = document.createElement('div');
+            rect.classList.add('rect');
+            container.appendChild(rect);
+            container.appendChild(rect.cloneNode());
+            container.appendChild(rect.cloneNode());
+            container.appendChild(rect.cloneNode());
+
+        }, 2000);
+    </script>
+    
+</body>
+</html>

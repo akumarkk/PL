@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+    Don't make any changes to the HTML CODE.
+    Just write the solution code in the designated sript tag
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <script>
+
+      function test() {
+        console.log('test');
+      }
+
+      function nodeStyleMapper(nodelist, property, value) {
+        nodelist.forEach(n => {
+          console.log(n);
+          n.style[property] = value;
+          console.log(property, value);
+        });
+
+      }
+
+      setTimeout(() => {
+        let p = document.querySelectorAll('p');
+        nodeStyleMapper(p, 'color', 'red');
+
+      }, 1000);
+
+
+      // Write solution here ====================================
+
+    </script>
+  </body>
+
+</html>

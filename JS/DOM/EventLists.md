@@ -69,3 +69,20 @@ inputField.addEventListener('change', () => {
   // Perform actions after the input is complete (e.g., submit form)
 });
 ```
+
+###### Form Events
+- submit: Fired when a form is submitted.
+- reset: Fired when a form is reset.
+
+###### Drag and Drop Events
+- dragstart: Fired when a draggable element is being dragged.
+- drag: Fired repeatedly while a draggable element is being dragged.
+- dragend: Fired when a draggable element is released after being dragged.
+- dragenter: Fired when a draggable element enters a drop target.
+- dragleave: Fired when a draggable element leaves a drop target.
+- dragover: Fired when a draggable element is being dragged over a drop target.
+- drop: Fired when a draggable element is dropped on a drop target.
+
+###### Window Events
+- resize: Fired when the window is resized.
+- scroll: Fired when the window is scrolled.

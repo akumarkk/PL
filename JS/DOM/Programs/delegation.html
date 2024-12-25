@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegation</title>
+</head>
+<body>
+    <button>
+        Remove All
+    </button>
+    <ul>
+        <li>
+            Item 1
+            <button>
+                Remove
+            </button>
+        </li>
+        <li>
+            Item 2
+            <button>
+                Remove
+            </button>
+        </li>
+        <li>
+            Item 3
+            <button>
+                Remove
+            </button>
+        </li>
+        <li>
+            Item 4
+            <button>
+                Remove
+            </button>
+        </li>
+        <li>
+            Item 5
+            <button>
+                Remove
+            </button>
+        </li>
+    </ul>
+
+    <script>
+        let ul = document.querySelector('ul');
+        ul.addEventListener('click', (e) => {
+            console.log(e.target.tagName);
+            if(e.target.tagName === "BUTTON") {
+                e.target.parentElement.remove();
+            }
+        })
+    </script>
+    
+</body>
+</html>

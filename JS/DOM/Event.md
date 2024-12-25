@@ -1,4 +1,6 @@
 ###### Events
+*Only in case of overlapped elements*
+*Events registred for capturing are called first, then events for bubbling, If there is a stopPropagation() in the capturing phase, the event will not propagate to the bubbling phase/subsequent element events  *
 Event Capturing
 
 Concept:

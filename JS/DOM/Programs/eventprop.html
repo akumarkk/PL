@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagation</title>
+
+    <style>
+        #d1 {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            background-color: beige;
+        }
+
+        #d2 {
+
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: rgb(139, 151, 173);
+            margin: 10px;
+        }
+
+        #d3 {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: rgb(0, 157, 255);
+            border: 2px solid black;
+            padding: 10px;
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        <div id="d2">
+            <div id="d3">
+                <button id="btn">
+                    Click Me!
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelector('#btn');
+        btn.addEventListener('click', (e) => {
+            // console.log(e);
+            // console.log(e.target);
+            // console.log(e.currentTarget);
+            // console.log(e.eventPhase);
+        });
+
+        let d1 = document.querySelector('#d1');
+        d1.addEventListener('click', (e) => {
+            console.log("event on d1");
+            e.stopPropagation();
+            
+        }, true);
+
+        let d2 = document.querySelector('#d2');
+        d2.addEventListener('click', (e) => {
+            console.log("event on d2");
+            e.stopPropagation();
+            
+        });
+
+        let d3 = document.querySelector('#d3');
+        d3.addEventListener('click', (e) => {
+            console.log("event on d3");
+            e.stopPropagation();
+            
+        });
+    </script>
+    
+</body>
+</html>

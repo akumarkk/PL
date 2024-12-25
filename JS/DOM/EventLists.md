@@ -86,3 +86,15 @@ inputField.addEventListener('change', () => {
 ###### Window Events
 - resize: Fired when the window is resized.
 - scroll: Fired when the window is scrolled.
+- load
+- unload
+
+###### Media Events
+- Can be used to control media elements (audio, video, and audio/video).
+- play: Fired when a media element starts playing.
+- pause: Fired when a media element is paused.
+- ended: Fired when a media element has finished playing.
+- volumechange: Fired when the volume of a media element changes.
+- timeupdate: Fired repeatedly during the playback of a media element to indicate the current playback position.
+- durationchange: Fired when the duration of a media element changes.
+- error: Fired when a media element fails to load or fails to play.

@@ -104,8 +104,10 @@ inputField.addEventListener('change', () => {
 - removeEventListener: Removes an event handler from an element.
 
 - Inline Event Handler: An event handler can be added directly to an HTML element using the inline event handler syntax.
+    - inline event handler cant be removed!
 ```
 <input type="button" onclick="alert('Hello world!');">
 
 <button type="button" onclick="alert('Hello world!');">Click me</button>
 ```
+*Security: Avoid using onclick with untrusted user input, as it can create security vulnerabilities (e.g., cross-site scripting).*

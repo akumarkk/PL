@@ -3,6 +3,17 @@
 *Events registred for capturing are called first, then events for bubbling, If there is a stopPropagation() in the capturing phase, the event will not propagate to the bubbling phase/subsequent element events  *
 Event Capturing
 
+event.target property refers to the DOM element that initiated the event. Here are a few key properties you can access on event.target:
+Common Properties:
+- nodeName: Returns the name of the element (e.g., "DIV", "BUTTON", "INPUT").
+- id: Returns the ID of the element, if it has one.
+- className: Returns the class name(s) of the element, if any.
+- value: For form elements like input fields, returns the current value.
+- textContent: Returns the text content of the element.
+- innerHTML: Returns the HTML content of the element.
+- dataset: Accesses the element's data attributes.
+- style: Accesses the element's inline styles.
+
 Concept:
 Event capturing is one of the two phases of event propagation in the DOM (Document Object Model). In this phase, an event "trickles down" from the outermost element (e.g., document or window) to the target element where the event originated.
 This allows ancestor elements to "intercept" an event before it reaches the target element.

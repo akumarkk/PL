@@ -42,3 +42,30 @@ Key Event Properties
 - ctrlKey: True if the Ctrl key was held down.
 - altKey: True if the Alt key was held down.
 - metaKey: True if the Meta key (usually Windows or Command key) was held down.
+
+##### Element Events
+- Each Element could have own events, custom events, default events
+
+- input:
+Fires repeatedly as the user types or modifies the input value. Catches every change, making it suitable for real-time feedback (e.g., live search, input validation).
+
+- change:
+Fires when the input loses focus and the value has been modified. Useful for actions that should happen after the user has finished interacting with the input (e.g., form submission).
+
+- focus: Fires when the input element receives focus (e.g., when the user clicks on it).
+- blur : Fires when the input element loses focus.
+- keydown: Fires when a key is pressed down on the - keyboard (can be used for specific key handling).
+- keyup: Fires when a key is released.
+```
+const inputField = document.getElementById('myInput');
+
+inputField.addEventListener('input', (event) => {
+  console.log('Input value changed:', event.target.value);
+  // Perform actions based on the input value (e.g., live search, input validation)
+});
+
+inputField.addEventListener('change', () => {
+  console.log('Input value changed and focus lost.');
+  // Perform actions after the input is complete (e.g., submit form)
+});
+```

@@ -64,7 +64,7 @@ getElement*() - returns the first element(Element type) that matches the selecto
 - Node Object : Base Class: The Node object is the base class for all objects in the DOM tree.
 - Event Object: Event Handling: The Event object provides information about an event that has occurred (e.g., a click, mouseover, keypress).
 - HTML Collection - an ordered collection of HTML elements.
-*HTMLCollection itself doesn't directly have a forEach method.*
+*HTMLCollection itself doesn't directly have a forEach method, no build-in iterative methods.*
 
 ```
 const elements = document.getElementsByTagName('p'); 
@@ -162,3 +162,9 @@ Node Lists
 HTML Collection
 - item(index)
 - length
+
+
+###### append vs appendChild
+appendChild: Appends a node to the end of the list of children of a node.
+*Only one node at a time*
+append: Appends a node to the end of the list of children of a node.

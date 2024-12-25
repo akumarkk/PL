@@ -42,8 +42,50 @@
                     f = true;
                 }
             });
+            container.setAttribute('data-rating', c);
             let count = document.querySelector('#count');
             count.innerText = `Rating count: ${c}`;
+        });
+
+        container.addEventListener('mouseover', (e) => {
+            let c = 0;
+            let f = false;
+            let star = document.querySelectorAll('.star');
+            star.forEach((element) => {
+
+                if(!f) {
+                    c++;
+                    element.innerHTML = '&#9733';
+                } else {
+                    element.innerHTML = '&#9734';
+                }
+                if (element == e.target) {
+                    f = true;
+                }
+            });
+            let count = document.querySelector('#count');
+            count.innerText = `Rating count: ${c}`;
+        });
+
+        container.addEventListener('mouseleave', (e) => {
+            let c = 0;
+            let f = false;
+            let rc = container.getAttribute('data-rating');
+            // if(container.getAttribute('data-rating')) {
+            //     return;
+            // }
+
+            let star = document.querySelectorAll('.star');
+            star.forEach((element) => {
+                c++;
+                if(c<=rc) {
+                    element.innerHTML = '&#9733';
+                } else {
+                    element.innerHTML = '&#9734';
+                }
+            });
+            let count = document.querySelector('#count');
+            count.innerText = `Rating count: ${c}`;            
         });
     </script>
     <script src="./script.js"></script>

@@ -98,3 +98,14 @@ inputField.addEventListener('change', () => {
 - timeupdate: Fired repeatedly during the playback of a media element to indicate the current playback position.
 - durationchange: Fired when the duration of a media element changes.
 - error: Fired when a media element fails to load or fails to play.
+
+###### Event Handling
+- addEventListener: Attaches an event handler to an element.
+- removeEventListener: Removes an event handler from an element.
+
+- Inline Event Handler: An event handler can be added directly to an HTML element using the inline event handler syntax.
+```
+<input type="button" onclick="alert('Hello world!');">
+
+<button type="button" onclick="alert('Hello world!');">Click me</button>
+```

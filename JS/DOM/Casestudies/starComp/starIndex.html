@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <style>
+        .star {
+            width: 2rem;
+            height: 2rem;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>Star Rating</h3>
+    <div class="container">
+        <div class="star">&#9734;</div>
+        <div class="star">&#9734;</div>
+        <div class="star">&#9734;</div>
+        <div class="star">&#9734;</div>
+        <div class="star">&#9734;</div>
+    </div>
+    <h3>Thank You!</h3>
+    <div id="count">Rating count: </div>
+    <script>
+        let container = document.querySelector('.container');
+        container.addEventListener('click', (e) => {
+            let c = 0;
+            let f = false;
+            let star = document.querySelectorAll('.star');
+            star.forEach((element) => {
+
+                if(!f) {
+                    c++;
+                    element.innerHTML = '&#9733';
+                } else {
+                    element.innerHTML = '&#9734';
+                }
+                if (element == e.target) {
+                    f = true;
+                }
+            });
+            let count = document.querySelector('#count');
+            count.innerText = `Rating count: ${c}`;
+        });
+    </script>
+    <script src="./script.js"></script>
+    
+</body>
+</html>

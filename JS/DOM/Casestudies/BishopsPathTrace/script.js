@@ -8,7 +8,7 @@ board.addEventListener('click', (e) => {
     if (!start) {
 
         path.set(e.target, e.target.style.backgroundColor);
-        start = true;
+        start = e.target;
         e.target.style.backgroundColor = 'red';
         
     } else if (start) {
@@ -19,7 +19,7 @@ board.addEventListener('click', (e) => {
             path.delete(element);
         });
         
-        start = true;
+        start = e.target;
         path.set(e.target, e.target.style.backgroundColor);
         e.target.style.backgroundColor = 'red';
         console.log("end clicked");
@@ -39,7 +39,7 @@ board.addEventListener('click', (e) => {
         path.forEach((color, element) => {
             element.style.backgroundColor = color;
         });
-        start = false;
+        start = null;
         end = false;
     }
 
@@ -57,7 +57,13 @@ board.addEventListener('mouseover', (e) => {
         return;
     }
 
-    path.set(e.target, e.target.style.backgroundColor);
-    e.target.style.backgroundColor = 'red';
+    let x = parseInt(e.target.parentElement.id) - parseInt(start.parentElement.id);
+    let y = (parseInt(e.target.id) % 8 == 0 ? 8 : parseInt(e.target.id) % 8)
+        - (parseInt(start.id) % 8 == 0 ? 8 : parseInt(start.id) % 8);
 
+    if (Math.abs(x) == Math.abs(y)) {
+        path.set(e.target, e.target.style.backgroundColor);
+        e.target.style.backgroundColor = 'red';
+        start = e.target;
+    }
 });

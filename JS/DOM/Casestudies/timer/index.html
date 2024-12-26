@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        .container {
+            align-content: center;
+            text-align: center;
+        }
+        input {
+            width: 1rem;
+            height: 2rem;
+            text-align: center;
+        }
+        .controls-container {
+            margin-top: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="minMsd" type="text">
+        <input id="minLsd" type="text">
+        <span> <b>:</b> </span>
+        <input id="secMsd" type="text">
+        <input id="secLsd" type="text">
+        <div class="controls-container">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+        <h5>Please enter valid time in MM:SS format</h5>
+    </div>
+
+    <script>
+
+
+        function start() {
+            // clearInterval(mint);
+            let count = 0;
+            let mint = setInterval(() => {
+                // console.log("count");
+                let secMsd = document.querySelector('#secMsd');
+                let secLsd = document.querySelector('#secLsd');
+                let minMsd = document.querySelector('#minMsd');
+                let minLsd = document.querySelector('#minLsd');
+                let sec = parseInt(secMsd.value) * 10 + parseInt(secLsd.value);
+                let min = parseInt(minMsd.value) * 10 + parseInt(minLsd.value);
+
+                let r = min * 60 + sec;
+                count++;
+                // if (count == r) {
+                //     clearInterval(mint);
+                // }
+                if(sec == 0 && min == 0) {
+                    clearInterval(mint);
+                    return;
+                }
+                
+                console.log(`${min}:${sec}`);
+                if(sec > 0) {  
+                    secMsd.value = Math.floor((sec - 1) / 10); 
+                    secLsd.value = (sec - 1) % 10;
+                    console.log(secMsd.value, secLsd.value);
+                }
+
+                if (sec == 0) {
+                    minMsd.value = Math.floor(min - 1/ 10) ;
+                    minLsd.value = (min - 1) % 10;
+
+                    secMsd.value = 5; 
+                    secLsd.value = 9;
+                }
+                // console.log("Timer");
+            }, 1000);
+
+            return mint;
+
+        }
+
+        let mint;
+
+        let startBut = document.querySelector('#start');
+        startBut.addEventListener('click', () => {
+            // let secMsd = document.querySelector('#secMsd');
+            //     let secLsd = document.querySelector('#secLsd');
+            //     let minMsd = document.querySelector('#minMsd');
+            //     let minLsd = document.querySelector('#minLsd');
+            //     let sec = parseInt(secMsd.value) * 10 + parseInt(secLsd.value);
+            //     let min = parseInt(minMsd.value) * 10 + parseInt(minLsd.value);
+            mint= start();
+        });
+
+        let stop = document.querySelector('#stop');
+        stop.addEventListener('click', () => {
+            clearInterval(mint);
+        });
+
+        let reset = document.querySelector('#reset');
+        reset.addEventListener('click', () => {
+            let secMsd = document.querySelector('#secMsd');
+            let secLsd = document.querySelector('#secLsd');
+            let minMsd = document.querySelector('#minMsd');
+            let minLsd = document.querySelector('#minLsd');
+            secMsd.value = 0;
+            secLsd.value = 0;
+            minMsd.value = 0;
+            minLsd.value = 0;
+            clearInterval(mint);
+        });
+    </script>
+    
+</body>
+</html>

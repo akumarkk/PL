@@ -85,6 +85,10 @@
 
         let startBut = document.querySelector('#start');
         startBut.addEventListener('click', () => {
+            let reset = document.querySelector('#reset');
+            reset.disabled = true;
+            let stop = document.querySelector('#stop');
+            stop.disabled = false;
             // let secMsd = document.querySelector('#secMsd');
             //     let secLsd = document.querySelector('#secLsd');
             //     let minMsd = document.querySelector('#minMsd');
@@ -97,6 +101,9 @@
         let stop = document.querySelector('#stop');
         stop.addEventListener('click', () => {
             clearInterval(mint);
+            stop.disabled = true;
+            let reset = document.querySelector('#reset');
+            reset.disabled = false;
         });
 
         let reset = document.querySelector('#reset');

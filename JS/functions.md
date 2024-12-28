@@ -11,3 +11,15 @@ Function.prototype.hello = function(a, b) {
 
 add.hello();
 ```
+
+###### Constructors functions
+```
+function Person(name) {
+    this.name = name;
+
+    return {name}
+}
+
+
+
+```

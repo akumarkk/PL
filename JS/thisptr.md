@@ -38,6 +38,6 @@ Note: Arrow function doesn't have their own context, only in case of ctor functi
 
 
  ###### call/apply/bind
- bind - returns a new function with the bounded new this context
- apply- Calls a function with a given this value and an array of arguments.
- call- Calls a function with a given this value and individual arguments.
+ bind() - returns a new function with the bounded new this context
+ apply() - Calls a function with a given this value and an array of arguments.
+ call() - Calls a function with a given this value and individual arguments.

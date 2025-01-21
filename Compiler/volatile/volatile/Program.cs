@@ -1,5 +1,7 @@
 ﻿namespace Volatile;
 
+
+// dotnet run -c Release
 internal class Program
 {
     static void Main(string[] args)
@@ -14,7 +16,7 @@ internal class Program
         }
         Console.WriteLine("worker is alive");
 
-
+        Thread.Sleep(500);
         worker.Stop();
         workerThread.Join();
 
@@ -27,9 +29,11 @@ class Worker{
     private bool _stopWorker = false;
 
     public void DoWork(){
+        bool work = false;
         while(!_stopWorker){
             // Console.Write("Working...");
-            // Thread.Sleep(1000);
+            // Thread.Sleep(500);
+            work = !work;
         }
 
         Console.Write("Working stopped...");

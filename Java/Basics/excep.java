@@ -3,11 +3,15 @@ public class Program {
 
     public static void main(String[] args) {
         try{
-            throw new IllegalArgumentException("Invalid exception");
+            // throw new IllegalArgumentException("Invalid exception");
+            throw new TestExcep("Test exception");
             // int a = 10/0;
         } catch(ArithmeticException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
+        } catch(TestExcep e) {
+            System.out.println("TestExcep");
+            System.out.println(e.getMessage());
         }
         catch(Exception e) {
             System.out.println(e.getMessage());

@@ -20,5 +20,6 @@ public class Program {
 
     public static void show() {
         System.out.println(19/0);
+        return;
     }
 }

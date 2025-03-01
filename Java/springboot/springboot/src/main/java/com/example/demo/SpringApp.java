@@ -12,10 +12,10 @@ import java.util.List;
 
 @SpringBootApplication
 @RestController
-public class MyprojectApplication {
+public class SpringApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MyprojectApplication.class, args);
+		SpringApplication.run(SpringApp.class, args);
 	}
 
 
